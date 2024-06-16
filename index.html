@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html>
+    <!-- Encabezado-->
 <head>
-    <title>El Sitio Web del Saber</title>
+    <title>ThinkLab</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<!-- CUERPO DE LA PAGINA-->
 <body>
-    
+    <!-- Caja 1; Logo Principal(ThinkLab) -->
+    <div class="Logo">
+        <img src="Images/LOGO PRINCIPAL.png" alt="ThinkLab" id="LogoMenuInicio">
+    </div>
+    <!-- Caja 2; Barra de busqueda y Boton Lupa -->
+    <div class="SearchContainer">
+        <form action="/buscar" method="get" class="BuscadorBoton">
+            <input type="text" placeholder="Buscar..." id="BarraBusqueda">
+            <button type="submit" name="Accion" value="BusquedaUsuario" id="BusquedaUsuarioButton">
+                <img src="Images/LUPA.png" alt="LUPA" id="ImagenLupa">
+            </button>
+        </form>
+    </div>
+    <!-- Seccion Libros Populares -->
+    <div class="LibrosPopularesContainer">
+        <div class="TituloYBotonPublicar">
+            <h1 class="TextosLibrosPopulares" id="TituloSeccion">Libros Populares</h1>
+            <button type="button" id="PublicaTuLibroButton" onclick="location.href='direccion.html'">Publica Tu Libro</button>     <!-- Esto se debe hacer en Java, lo que hace es que cuando el usuario haga click en el boton, enviara datos a java para que este haga algo -->
+        </div>
+        <div class="Opciones" id="CategoriaLibros" onclick="IrALibros()">  <!-- IrALibros() es una function de JAVA, al hacer clic en el div, esta funcion se ejecutará, aun no está hecho -->
+        </div>
+    </div>
+    <div class="LibrosPopularesContainer">
+        <div class="TituloYBotonPublicar">
+            <h1 class="TextosLibrosPopulares" id="TituloSeccion">Inventos Populares</h1>
+            <button type="button" id="PublicaTuLibroButton" onclick="location.href='direccion.html'">Publica Tu Invento</button>     <!-- Esto se debe hacer en Java, lo que hace es que cuando el usuario haga click en el boton, enviara datos a java para que este haga algo -->
+        </div>
+        <div class="Opciones" id="CategoriaLibros" onclick="IrALibros()">  <!-- IrALibros() es una function de JAVA, al hacer clic en el div, esta funcion se ejecutará, aun no está hecho -->
+        </div>
+    </div>
 </body>
 </html>
